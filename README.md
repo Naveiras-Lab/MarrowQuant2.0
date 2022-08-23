@@ -79,7 +79,7 @@ The Stardist on Adipocytes function was devised for the purpose of individual ad
 ### Install StarDist QuPath Extension
 Follow the instructions in https://github.com/qupath/qupath-extension-stardist#installing
 
-The custom model used for this script (TBD) can be dowloaded here: TBD
+The custom model used for this script can be dowloaded here: https://zenodo.org/record/7003909#.YwTfnexBzQ0
 
 This SstarDist Model was trained on human bone marrow H&E images, and thus might yield different results depending on the tissue and magnification used. 
 
