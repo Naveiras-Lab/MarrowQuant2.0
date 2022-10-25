@@ -1,3 +1,7 @@
+First release for the publication can be found on ZENODO
+
+[![DOI](https://zenodo.org/badge/525402383.svg)](https://zenodo.org/badge/latestdoi/525402383)
+
 # MarrowQuant 2.0.
 MarrowQuant 2.0. is a user-friendly algorithm for the quantification of human H&E bone marrow tissue biopsies in whole slide images, implemented as a QuPath Script. It is the translated version (human scale) of the first released version MarrowQuant on mouse H&E bone marrow whole slide images. 
 Keywords: Digital Pathology, Whole slide Imaging, QuPath, Bone Marrow, Cellularity, Adiposity, hematopathology, open-source.
