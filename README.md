@@ -85,6 +85,8 @@ Follow the instructions in https://github.com/qupath/qupath-extension-stardist#i
 
 The custom model used for this script can be dowloaded here: https://zenodo.org/record/7003909#.YwTfnexBzQ0
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7003909.svg)](https://doi.org/10.5281/zenodo.7003909)
+
 This SstarDist Model was trained on human bone marrow H&E images, and thus might yield different results depending on the tissue and magnification used. 
 
 ### Steps from launch to results:
