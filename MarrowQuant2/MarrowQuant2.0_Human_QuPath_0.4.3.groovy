@@ -22,7 +22,7 @@
 // = DEPENDENCIES =
 // MarrowQuant needs several jars to run properly. Please see the
 // installation instruction on GitHub: 
-// https://github.com/Naveiras-Lab/MarrowQuant/tree/qupath-0.3.1
+// https://github.com/Naveiras-Lab/MarrowQuant/tree/qupath-0.4.3
 // 
 // 
 // = AUTHOR INFORMATION =
@@ -30,7 +30,7 @@
 // Code debugging, supervision and upgrade by Olivier Burri & Rita Sarkis
 // EPFL-SV-PTECH-BIOP, EPFL-SV-GRNAVEIRAS
 // for Rita Sarkis, Naveiras-Lab
-// DATE
+// 20230616
 // 
 // = COPYRIGHT =
 // © All rights reserved. ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, BioImaging And Optics Platform (BIOP), GR-NAVEIRAS-Laboratory of regenerative hematopoiesis 2019
@@ -421,10 +421,10 @@ class MarrowQuant {
         def adip   = getQuPathPathObject(  this.adipRoi, adip_class ) 
         def artifacts   = getQuPathPathObject(  this.artifactsRoi, artifact_class )
         
-        this.tissueAnnotation.addPathObject( imv )
-        this.tissueAnnotation.addPathObject( hemato )
-        this.tissueAnnotation.addPathObject( bone )
-        this.tissueAnnotation.addPathObject( adip )
+        this.tissueAnnotation.addChildObject( imv )
+        this.tissueAnnotation.addChildObject( hemato )
+        this.tissueAnnotation.addChildObject( bone )
+        this.tissueAnnotation.addChildObject( adip )
    
         def area_tissue = this.tissueAnnotation.getROI().getArea()
     
@@ -516,7 +516,7 @@ class MarrowQuant {
             def rois = rm.getRoisAsArray() as List
             
             rois.eachWithIndex{ roi, idx -> 
-                this.tissueAnnotation.addPathObject( getQuPathPathObject( roi, aadip_class ) )
+                this.tissueAnnotation.addChildObject( getQuPathPathObject( roi, aadip_class ) )
             }
                             measurements.putMeasurement( "Aj.Ad.N", rois.size() )
                             measurements.putMeasurement("Ad.MA.Ar_Nby_"+U+"^2", rois.size()/ round( ( area_hemato + area_adips + area_imv ) * px_size * px_size ,0 ) )
