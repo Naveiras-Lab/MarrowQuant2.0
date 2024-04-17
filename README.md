@@ -11,20 +11,22 @@ http://qupath.github.io
 ## Installing & Running MarrowQuant 2.0
 MarrowQuant 2.0 is a script adapted for QuPath using Fiji as an extension and groovy language for scripting. We will first outline QuPath installation steps, and then we will describe how to use MarrowQuant within QuPath. We highly encourage you to visit http://qupath.github.io. The current version of MarrowQuant in QuPath 0.3.1 version has been extensively tested in human bone marrow biopsies.
 
-### QuPath 0.3.1 Installation
+### QuPath Installation
 
-Follow the instruction on http://qupath.github.io to install QuPath 0.3.1.
-Download the extension file from the following Zenodo link: 
+Download and install QuPath from https://qupath.github.io
 
-### Setting up QuPath 0.3.1 for MarrowQuant
+The latest working version that this was tested on is QuPath 0.5.1
 
-1.	Download this repository and navigate to the ‘Setup’ directory.
-2.	Add the contents of the ‘Extensions’ directory in the ‘Extensions’ directory from the QuPath download.
-3.	Copy the “ij-plugins” directory to a location and keep track of it.
-4.	Start QuPath.
-5.	In Help>Show setup options, make sure to uncheck the verification of updates at launch, as it is not recommended to use more recent versions of QuPath as they may be unsupported by MarrowQuant.
-6.	Set the correct maximum amount of RAM you need. The typical value recommended is around three quarter of the maximum RAM that the computer possesses, depending on your usage of other programs simultaneously with QuPath.
-7.	Go to Edit>Preferences, and enter the path of the QuPath Extensions folder under "Extensions directory", in "ImageJ plugin directory", enter the path of the "ij-plugins" folder in "Script Directory", enter the path of the "Code" Directory of MarrowQuant
+### Setting up QuPath 0.5.1 for MarrowQuant
+1. Download the code to this reposity by going to the latest release page
+https://github.com/Naveiras-Lab/MarrowQuant2.0/releases
+    - Download the source code `.zip` file.
+    - Unzip it somewhere. This contains the code that you will need to run MarrowQuant and StarDist adipocyte detection.
+    - Download the 3 .jar files `Colour_Deconvolution-3.0.2.jar`, `qupath-extension-biop-3.1.0.jar` and `qupath-extension-stardist-0.5.0.jar`
+2. Start QuPath
+3. Drag and drop all 3 .jar files directly into QuPath.
+    - If you haven't installed any extensions before, you'll be prompted to select a QuPath user directory. The extension will then be copied to a location inside that directory.
+4. You might then need to restart QuPath (but not your computer).
 
 ## Creation of a project
 
