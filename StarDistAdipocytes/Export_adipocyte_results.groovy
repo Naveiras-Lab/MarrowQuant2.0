@@ -12,7 +12,8 @@
  * To start from scratch, you MUST delete 'annotations.txt' and 'adipocytes.txt'
  *
  * = DEPENDENCIES =
- * You need to install the BIOP Tools Extension https://github.com/BIOP/qupath-extension-biop
+ * You need to install the QuPath Extension BIOP https://github.com/BIOP/qupath-extension-biop
+ * You can also get it from the MarrowQuant2.0 Releases page: https://github.com/Naveiras-Lab/MarrowQuant2.0/releases
  * 
  * = INSTALLATION = 
  * After you have installed the extension, nothing else is needed
@@ -22,6 +23,7 @@
  * for Rita Sarkis, UPNAVEIRAS
  * 2020.01.20
  * 
+ * Last tested on QuPath 0.5.1
  * = COPYRIGHT =
  * Due to the simple nature of this code, no copyright is applicable
  */

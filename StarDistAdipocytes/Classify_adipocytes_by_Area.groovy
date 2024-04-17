@@ -20,6 +20,8 @@
  * for Rita Sarkis, UPNAVEIRAS
  * 2020.01.20
  * 
+ * Last tested on QuPath 0.5.1
+ * 
  * = COPYRIGHT =
  * Due to the simple nature of this code, no copyright is applicable
  */
@@ -34,6 +36,7 @@ getDetectionObjects().each{it.setPathClass(null)}
 annotations.each{ annotation ->
     def adips = annotation.getChildObjects().findAll{ it instanceof PathDetectionObject }
     
+    
 
     
     for( int i=1; i< areaLimits.size(); i++ ) {
@@ -46,12 +49,14 @@ annotations.each{ annotation ->
     
     // Add total adip area
     def totalArea = adips.collect{ measurement( it, "Area "+um+"^2" )}.sum()
-    annotation.getMeasurementList().putMeasurement( "Total Adip Area "+um+"^2", totalArea )
-    def nAdip = adips.size()
-    classNames.each{ name -> 
-        def n = adips.findAll{ it.getPathClass().equals( getPathClass( name ) ) }.size()
-        
-        annotation.getMeasurementList().putMeasurement( "% "+name+" Adips", n/nAdip *100 )
+    if ( totalArea != null ) {
+        annotation.getMeasurementList().putMeasurement( "Total Adip Area "+um+"^2", totalArea )
+        def nAdip = adips.size()
+        classNames.each{ name -> 
+            def n = adips.findAll{ it.getPathClass().equals( getPathClass( name ) ) }.size()
+            
+            annotation.getMeasurementList().putMeasurement( "% "+name+" Adips", n/nAdip *100 )
+        }
     }
    
 }
